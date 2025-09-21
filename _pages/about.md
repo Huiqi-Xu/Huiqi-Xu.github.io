@@ -5,7 +5,7 @@ permalink: /
 subtitle: 
 profile:
   align: right
-  image: 如何呢.jpg
+  image: hq avatar.png
   image_circular: true # crops the image to make it circular
   address: 
 news: true  # includes a list of news items
