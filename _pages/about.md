@@ -5,8 +5,7 @@ permalink: /
 subtitle: 
 profile:
   align: right
-  image: hq avatar.jpg
-  image_circular: true # crops the image to make it circular
+  image: hq avatar.png
   address: 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
