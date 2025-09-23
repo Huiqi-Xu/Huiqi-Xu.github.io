@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll site
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master ]   # 🚨 监听 master 分支上的改动
   pull_request:
 
 jobs:
@@ -10,37 +10,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. 拉取仓库代码
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. 安装 Ruby 和 Bundler（Jekyll 依赖）
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
 
+      # 3. 安装 ImageMagick（解决 convert not found 问题）
       - name: Install ImageMagick
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
 
-      - name: Install Jupyter
+      # 4. 安装 Jupyter nbconvert（支持 jekyll-jupyter-notebook）
+      - name: Install Jupyter tools
         run: |
           pip install --upgrade pip
           pip install jupyter nbconvert
 
+      # 5. 安装依赖
       - name: Install dependencies
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
 
+      # 6. 构建 Jekyll 网站
       - name: Build Jekyll site
         run: bundle exec jekyll build --verbose
 
+      # 7. 部署到 GitHub Pages (gh-pages 分支)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: ph-graph
-          force_orphan: true   # 防止 128 错误
+          publish_branch: gh-pages   # ✅ 改成 gh-pages
