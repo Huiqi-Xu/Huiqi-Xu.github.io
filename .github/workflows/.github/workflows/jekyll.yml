@@ -2,8 +2,9 @@ name: Build and Deploy Jekyll site
 
 on:
   push:
-    branches: [ master ]   # 🚨 这里已经改成 master
-  pull_request:
+    branches:
+      - master   # 监听 master 分支
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -16,7 +17,7 @@ jobs:
       - name: Set up Ruby (with bundler cache)
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'    # 常用版本，除非你的 Gemfile 锁了其他版本
+          ruby-version: '3.1'
           bundler-cache: true
 
       - name: Install dependencies
@@ -24,12 +25,15 @@ jobs:
           gem install bundler
           bundle install --jobs 4 --retry 3
 
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
       - name: Build Jekyll site
         run: bundle exec jekyll build --verbose
 
-      - name: Deploy to GitHub Pages (gh-pages branch)
+      - name: Deploy to GitHub Pages (ph-graph branch)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: gh-pages
+          publish_branch: ph-graph   # ✅ 发布到你设置的分支
