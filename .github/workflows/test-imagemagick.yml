@@ -3,7 +3,7 @@ name: Test ImageMagick
 on:
   push:
     branches:
-      - master   # 你可以改成测试分支
+      - master
   workflow_dispatch:
 
 jobs:
@@ -14,16 +14,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install ImageMagick
+      - name: Install full ImageMagick
         run: |
           sudo apt-get update
+          sudo apt-get install -y software-properties-common
+          sudo add-apt-repository -y ppa:imagemagick/ppa
+          sudo apt-get update
           sudo apt-get install -y imagemagick ghostscript
-          echo "==> Checking available ImageMagick commands..."
-          which magick || echo "magick not found"
-          magick --version || echo "magick command failed"
 
-      - name: Run simple magick convert test
+      - name: Verify installation
         run: |
-          echo "==> Creating test image with magick..."
-          magick convert -size 100x100 xc:red test.png
+          echo "==> Checking commands..."
+          which convert || echo "convert not found"
+          which magick || echo "magick not found"
+          convert --version || echo "convert failed"
+          magick --version || echo "magick failed"
+
+      - name: Run simple convert test
+        run: |
+          echo "==> Creating test image..."
+          convert -size 100x100 xc:red test.png || magick convert -size 100x100 xc:red test.png
           ls -l test.png
