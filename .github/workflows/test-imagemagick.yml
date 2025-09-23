@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master   # 你可以改成测试分支
-  workflow_dispatch:   # 可以手动在 Actions 里运行
+  workflow_dispatch:
 
 jobs:
   test-imagemagick:
@@ -19,15 +19,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick ghostscript
           echo "==> Checking available ImageMagick commands..."
-          which convert || echo "convert not found"
           which magick || echo "magick not found"
-          echo "==> Testing convert --version"
-          convert --version || echo "convert command failed"
-          echo "==> Testing magick --version"
           magick --version || echo "magick command failed"
 
-      - name: Run simple convert test
+      - name: Run simple magick convert test
         run: |
-          echo "==> Creating test image..."
-          convert -size 100x100 xc:red test.png || magick convert -size 100x100 xc:red test.png
+          echo "==> Creating test image with magick..."
+          magick convert -size 100x100 xc:red test.png
           ls -l test.png
