@@ -2,45 +2,51 @@ name: Build and Deploy Jekyll site
 
 on:
   push:
-    branches: [ master ]   # 如果你默认开发分支是 master
+    branches: [ master ]   # 监听 master 分支
   pull_request:
 
 jobs:
-  build-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. 拉取仓库代码
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install ImageMagick
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y imagemagick
-
-      - name: Verify ImageMagick
-        run: |
-          echo "==> Checking available commands..."
-          which convert
-          convert --version
-
+      # 2. 安装 Ruby 和 Bundler（Jekyll 需要 Ruby）
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
 
+      # 3. 安装 ImageMagick（解决 convert not found 问题）
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      # 4. 安装 Jupyter（支持 jekyll-jupyter-notebook）
+      - name: Install Jupyter
+        run: |
+          pip install --upgrade pip
+          pip install notebook nbconvert
+
+      # 5. 安装依赖
       - name: Install dependencies
         run: |
           gem install bundler
           bundle install --jobs 4 --retry 3
 
+      # 6. 构建 Jekyll 网站
       - name: Build Jekyll site
         run: bundle exec jekyll build --verbose
 
+      # 7. 部署到 GitHub Pages (ph-graph 分支)
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site
-          publish_branch: ph-graph   # 你在 Settings → Pages 里设置的分支
+          publish_branch: ph-graph
