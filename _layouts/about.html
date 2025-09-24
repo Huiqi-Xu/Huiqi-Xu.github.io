@@ -42,28 +42,37 @@ layout: default
       </div>
     {%- endif %}
 
-    <!-- ✅ 渲染正文的第一部分（interests 前的内容） -->
-    <div class="clearfix">
-      {{ content | split:'<!-- interests-start -->' | first }}
-    </div>
+    {% assign parts = content | split:'<!-- interests-start -->' %}
 
-    <!-- ✅ 插入 interests/education 左右分栏 -->
-    {% if page.left_column or page.right_column %}
-      <hr/>
-      <div class="row">
-        <div class="col-md-6">
-          {{ page.left_column | markdownify }}
+    {% if parts.size > 1 %}
+      <!-- ✅ 如果有分隔符，渲染前半部分 -->
+      <div class="clearfix">
+        {{ parts[0] }}
+      </div>
+
+      <!-- ✅ 插入 Interests/Education -->
+      {% if page.left_column or page.right_column %}
+        <hr/>
+        <div class="row">
+          <div class="col-md-6">
+            {{ page.left_column | markdownify }}
+          </div>
+          <div class="col-md-6">
+            {{ page.right_column | markdownify }}
+          </div>
         </div>
-        <div class="col-md-6">
-          {{ page.right_column | markdownify }}
-        </div>
+      {% endif %}
+
+      <!-- ✅ 渲染后半部分 -->
+      <div class="clearfix">
+        {{ parts[1] }}
+      </div>
+    {% else %}
+      <!-- ✅ 如果没有分隔符，只渲染一次 -->
+      <div class="clearfix">
+        {{ content }}
       </div>
     {% endif %}
-
-    <!-- ✅ 渲染正文的第二部分（大图片等） -->
-    <div class="clearfix">
-      {{ content | split:'<!-- interests-start -->' | last }}
-    </div>
 
     <!-- News -->
     {% if page.news and site.announcements.enabled -%}
