@@ -8,13 +8,13 @@ profile:
   image: hq_avatar.png
   image_circular: true # crops the image to make it circular
   address: 
-  
+
 left_column: |
   ## Interests
   - 📖 Reading  
   - 🍳 Cooking  
   - ✈️ Traveling  
-  - 🚶 jogging  
+  - 🚶 Jogging  
 
 right_column: |
   ## Education
@@ -23,7 +23,7 @@ right_column: |
 
   🎓 B.A. in Advertising, 2021–2025  
   *Jinan University*  
-
+---
    
   
 news: true  # includes a list of news items
