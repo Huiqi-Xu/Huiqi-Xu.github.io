@@ -8,7 +8,8 @@ profile:
   image: hq_avatar.png
   image_circular: true # crops the image to make it circular
   address: 
-  left_column: |
+  
+left_column: |
   ## Interests
   - Reading  
   - Cooking  
