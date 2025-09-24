@@ -35,6 +35,8 @@ social: true  # includes social icons at the bottom of the page
 She has contributed to a project funded by the National Natural Science Foundation and led a provincial-level entrepreneurship initiative. Her research output includes a published review in [CSSCI-indexed journals]("https://journal.psych.ac.cn/xlkxjz/CN/10.3724/SP.J.1042.2024.01680"), an empirical paper, and a comprehensive survey report utilizing big data research methods.  
 Complementing her academic pursuits, Huiqi has proven practical prowess in the field. Her professional experience includes internships at leading communication groups Publicis Groupe and Blue Focus, where she gained hands-on experience in marketing strategy and addressed real-world communication challenges.
 
+<!-- interests-start -->
+
 <img src="/assets/img/yyt.jpg" align = "middle" width = "800px">
 
 
