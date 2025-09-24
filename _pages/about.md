@@ -8,6 +8,20 @@ profile:
   image: hq_avatar.png
   image_circular: true # crops the image to make it circular
   address: 
+  left_column: |
+  ## Interests
+  - Reading  
+  - Cooking  
+  - Traveling  
+  - Walking  
+
+right_column: |
+  ## Education
+  🎓 B.A. in Advertising, 2021–2025  
+  *Jinan University*  
+  🎓 M.A. Candidate in Journalism and Communication, 2025–2028  
+  *Nanjing University*  
+  
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
