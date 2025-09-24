@@ -19,9 +19,11 @@ left_column: |
 right_column: |
   ## Education
   🎓 M.A. Candidate in Journalism and Communication, 2025–2028  
-  *Nanjing University* 
+  *Nanjing University*  
+
   🎓 B.A. in Advertising, 2021–2025  
   *Jinan University*  
+
    
   
 news: true  # includes a list of news items
