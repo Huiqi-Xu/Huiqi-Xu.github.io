@@ -23,6 +23,19 @@ layout: default
                 {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
               {% endif %}
 
+                 <!-- ✅ 只有兴趣和教育才用左右分栏 -->
+    {% if page.left_column or page.right_column %}
+      <hr/>
+      <div class="row">
+        <div class="col-md-6">
+          {{ page.left_column | markdownify }}
+        </div>
+        <div class="col-md-6">
+          {{ page.right_column | markdownify }}
+        </div>
+      </div>
+    {% endif %}
+
               {% include figure.html
               path=profile_image_path
               class=profile_image_class
@@ -40,19 +53,7 @@ layout: default
           <div class="clearfix">
             {{ content }}
           </div>
-              
-              <!-- ✅ 只有兴趣和教育才用左右分栏 -->
-    {% if page.left_column or page.right_column %}
-      <hr/>
-      <div class="row">
-        <div class="col-md-6">
-          {{ page.left_column | markdownify }}
-        </div>
-        <div class="col-md-6">
-          {{ page.right_column | markdownify }}
-        </div>
-      </div>
-    {% endif %}
+            
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
