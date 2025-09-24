@@ -13,13 +13,13 @@ nav_order: 1
 
 ## Projects
 
-1. National Natural Science Foundation of China (NSFC) Project, 2023: "The Formation Mechanism and Spillover Effects of Minimalist Consumption under the 'Dual Affluence' Context: A Person-Object Relationship Perspective" (Second Author)
-   2023年度国家自然科学基金项目《“双富裕”背景下极简主义消费的形成机制及溢出效应：物我关系视角》（二作）
+1. National Natural Science Foundation of China (NSFC) Project, 2023: "The Formation Mechanism and Spillover Effects of Minimalist Consumption under the 'Dual Affluence' Context: A Person-Object Relationship Perspective" 
+   2023年度国家自然科学基金项目《“双富裕”背景下极简主义消费的形成机制及溢出效应：物我关系视角》（参与）
    
-2. National-Level College Student Innovation Training Program, 2024: "Cloud-Paved Path to Health: Building Medical IP to Bridge the Last-Mile of Community Health Connectivity" (Completed; Fifth Author)
-   2024年度大学生国家级大创《“云”通康途：打造医疗IP，助推社区健康互联最后一公里》（已结项，五作）
+2. National-Level College Student Innovation Training Program, 2024: "Cloud-Paved Path to Health: Building Medical IP to Bridge the Last-Mile of Community Health Connectivity" 
+   2024年度大学生国家级大创《“云”通康途：打造医疗IP，助推社区健康互联最后一公里》（已结项，参与）
 
-3. Guangdong Provincial College Student Innovation Training Program, 2023: "A Study on the Interaction Effectiveness and Enhancement Strategies for Online Teaching in Universities of the Guangdong-Hong Kong-Macao Greater Bay Area under the Digital Education Strategy" (Completed; Project Leader)
+3. Guangdong Provincial College Student Innovation Training Program, 2023: "A Study on the Interaction Effectiveness and Enhancement Strategies for Online Teaching in Universities of the Guangdong-Hong Kong-Macao Greater Bay Area under the Digital Education Strategy"
    2023年度广东大学生大创项目《教育数字化战略下粤港澳大湾区高校在线教学交互效果及提升策略研究》（已结项，负责人）
 
 
