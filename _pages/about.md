@@ -32,7 +32,7 @@ social: true  # includes social icons at the bottom of the page
 
 
 **Xu Huiqi** (徐惠琪) is a Master's student specializing in Digital Marketing and Communication at the School of Journalism and Communication, Nanjing University. Her research interests lie at the intersection of data science and communication, focusing on employing big data and computational methods to analyze digital marketing effectiveness and consumer behavior.  
-She has contributed to a project funded by the National Natural Science Foundation and led a provincial-level entrepreneurship initiative. Her research output includes a published review in [CSSCI-indexed journals]("https://journal.psych.ac.cn/xlkxjz/CN/10.3724/SP.J.1042.2024.01680"), an empirical paper, and a comprehensive survey report utilizing big data research methods.  
+She has contributed to a project funded by the National Natural Science Foundation and led a provincial-level entrepreneurship initiative. Her research output includes a published review in [CSSCI-indexed journals](https://journal.psych.ac.cn/xlkxjz/CN/10.3724/SP.J.1042.2024.01680), an empirical paper, and a comprehensive survey report utilizing big data research methods.  
 Complementing her academic pursuits, Huiqi has proven practical prowess in the field. Her professional experience includes internships at leading communication groups Publicis Groupe and Blue Focus, where she gained hands-on experience in marketing strategy and addressed real-world communication challenges.
 
 <!-- interests-start -->
