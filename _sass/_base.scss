@@ -427,20 +427,19 @@ footer.sticky-bottom {
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
-  
+
   /* 这里是新增的优化部分 */
   font-weight: 800;     /* 加粗 */
   font-size: 2.5rem;    /* 调大字号 */
   letter-spacing: 1px;  /* 稍微拉开字间距 */
   text-align: center;   /* 居中显示 */
   margin-bottom: 0.5rem;/* 和副标题保持合适间距 */
-  }
+}
 
 .post-header .desc {
   font-size: 1.1rem;   /* 副标题小一点 */
   color: #555;         /* 浅灰，弱化 */
   text-align: center;  /* 和标题对齐 */
-  }
 }
 
 .post-list {
