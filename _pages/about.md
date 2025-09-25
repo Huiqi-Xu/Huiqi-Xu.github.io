@@ -37,7 +37,7 @@ Complementing her academic pursuits, Huiqi has proven practical prowess in the f
 
 <!-- interests-start -->
 
-<img src="/assets/img/yyt.jpg" align = "middle" width = "800px">
+<img src="/assets/img/nju.jpg" align = "middle" width = "800px">
 
 
 <br>
