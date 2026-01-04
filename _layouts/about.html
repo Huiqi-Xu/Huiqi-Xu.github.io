@@ -63,68 +63,68 @@ layout: default
         </div>
       {% endif %}
 
-      <!-- 新增Publications四卡片布局 -->
-      <hr/>
-      <h2>Publication & Awards</h2>
-      <div class="row" style="margin-top: 20px; gap: 20px;">
-        <!-- 卡片1 -->
-        <div class="col-md-3"> <!-- 四列布局：col-md-3（12/3=4列） -->
-          <div class="card" style="border-radius: 6px; border: 1px solid #eaecef;">
-            <div class="card-body">
-              <h5 class="card-title" style="margin-bottom: 10px;">[EMNLP2024 Main]</h5>
-              <div class="card-text" style="font-size: 0.9em;">
-                <a href="[你的PDF链接]" style="color: #0366d6; text-decoration: none;">PDF</a> · 
-                <a href="[你的代码链接]" style="color: #0366d6; text-decoration: none;">Code</a> · 
-                <a href="[你的海报链接]" style="color: #0366d6; text-decoration: none;">Poster</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 卡片2 -->
-        <div class="col-md-3">
-          <div class="card" style="border-radius: 6px; border: 1px solid #eaecef;">
-            <div class="card-body">
-              <h5 class="card-title" style="margin-bottom: 10px;">[CCL2024 Main]</h5>
-              <div class="card-text" style="font-size: 0.9em;">
-                <a href="[你的PDF链接]" style="color: #0366d6; text-decoration: none;">PDF</a> · 
-                <a href="[你的代码链接]" style="color: #0366d6; text-decoration: none;">Code</a> · 
-                <a href="[你的海报链接]" style="color: #0366d6; text-decoration: none;">Poster</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 卡片3 -->
-        <div class="col-md-3">
-          <div class="card" style="border-radius: 6px; border: 1px solid #eaecef;">
-            <div class="card-body">
-              <h5 class="card-title" style="margin-bottom: 10px;">[arXiv:2403]</h5>
-              <div class="card-text" style="font-size: 0.9em;">
-                <a href="[你的PDF链接]" style="color: #0366d6; text-decoration: none;">PDF</a> · 
-                <a href="[你的代码链接]" style="color: #0366d6; text-decoration: none;">Code</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 卡片4（待审核） -->
-        <div class="col-md-3">
-          <div class="card" style="border-radius: 6px; border: 1px solid #eaecef;">
-            <div class="card-body">
-              <h5 class="card-title" style="margin-bottom: 10px;">[AAAI2025 Submission]</h5>
-              <div class="card-text" style="font-size: 0.9em; color: #6a737d;">
-                Under Review
-              </div>
-            </div>
+     <!-- 调整后的Publication & Awards卡片布局 -->
+<div class="container-fluid px-0">
+  <h2>Publication & Awards</h2>
+  <!-- Bootstrap栅格：四列等宽（col-md-3）+ 间距（g-4） -->
+  <div class="row g-4 mt-3">
+    <!-- 卡片1 -->
+    <div class="col-md-3">
+      <div class="card h-100" style="border: 1px solid #eaecef; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <div class="card-body p-4">
+          <h5 class="card-title mb-3">[EMNLP2024 Main]</h5>
+          <div class="card-text">
+            <a href="#" style="color: #0366d6; text-decoration: none;">PDF</a> · 
+            <a href="#" style="color: #0366d6; text-decoration: none;">Code</a> · 
+            <a href="#" style="color: #0366d6; text-decoration: none;">Poster</a>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- 完整列表链接（可选） -->
-      <div style="margin-top: 20px; font-size: 0.95em;">
-        Complete List · <a href="[你的Google Scholar链接]" style="color: #0366d6; text-decoration: none;">Google Scholar</a>
+    <!-- 卡片2 -->
+    <div class="col-md-3">
+      <div class="card h-100" style="border: 1px solid #eaecef; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <div class="card-body p-4">
+          <h5 class="card-title mb-3">[CCL2024 Main]</h5>
+          <div class="card-text">
+            <a href="#" style="color: #0366d6; text-decoration: none;">PDF</a> · 
+            <a href="#" style="color: #0366d6; text-decoration: none;">Code</a> · 
+            <a href="#" style="color: #0366d6; text-decoration: none;">Poster</a>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- 卡片3 -->
+    <div class="col-md-3">
+      <div class="card h-100" style="border: 1px solid #eaecef; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <div class="card-body p-4">
+          <h5 class="card-title mb-3">[arXiv:2403]</h5>
+          <div class="card-text">
+            <a href="#" style="color: #0366d6; text-decoration: none;">PDF</a> · 
+            <a href="#" style="color: #0366d6; text-decoration: none;">Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 卡片4 -->
+    <div class="col-md-3">
+      <div class="card h-100" style="border: 1px solid #eaecef; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <div class="card-body p-4">
+          <h5 class="card-title mb-3">[AAAI2025 Submission]</h5>
+          <div class="card-text text-muted">Under Review</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 完整列表链接 -->
+  <div class="mt-4" style="font-size: 0.95em;">
+    Complete List · <a href="#" style="color: #0366d6; text-decoration: none;">Google Scholar</a>
+  </div>
+</div>
 
     <!-- 时间轴板块 -->
 <hr/> <!-- 补全之前漏的闭合符 -->
